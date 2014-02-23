@@ -1,0 +1,21 @@
+[home]
+title = Philosophy
+
+[menu]
+title = Menu
+
+[events]
+title = Events
+
+[gallery]
+title = Gallery
+
+[contact]
+title = Contact
+
+[pages]
+home = Philosophy
+menu = Menu
+events = Events
+gallery = Gallery
+contact = Contact

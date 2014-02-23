@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{ i18n[pageKey].title }} | {{ globals.companyName }}</title>
+    {% include 'partials/meta' %}
+
+    {% include 'partials/scripts' %}
+    
+    {% include 'partials/styles' %}
+
+</head>
+<body>
+    {% include 'partials/header' %}
+
+    {% include 'partials/menu' %}
+    
+    {% include pageKey %}
+</body>
+</html>

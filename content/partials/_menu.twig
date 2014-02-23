@@ -1,0 +1,7 @@
+{% spaceless %}
+<ul class="menu">
+{% for key,name in i18n.pages %}
+    <li><a href="{{key}}.html">{{ name }}</a></li>
+{% endfor %}
+</ul>
+{% endspaceless %}

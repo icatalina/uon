@@ -1,0 +1,7 @@
+<h2>{{ i18n[pageKey].title }}</h2>
+{% for year, gallery in galleries.sub.catalogue.sub %}
+    <h3>{{year}}</h3>    
+    {% for key, file in gallery.files %}
+        <img src="galleries/catalogue/{{year}}/{{key}}" width="{{gallery.config.sizes.small}}" />
+    {% endfor %}
+{% endfor %}

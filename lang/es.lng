@@ -1,0 +1,21 @@
+[home]
+title = Filosofia
+
+[menu]
+title = Carta
+
+[events]
+title = Eventos
+
+[gallery]
+title = Galeria
+
+[contact]
+title = Contacto
+
+[pages]
+home = Filosofia
+menu = Carta
+events = Eventos
+gallery = Galeria
+contact = Contacto
