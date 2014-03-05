@@ -9,6 +9,9 @@ include 'utils/functions.php';
 $outputDir = conf('folders.output');
 $defaultLayout = conf("layouts.default");
 
+# Create output folder
+if (!is_dir($outputDir)) { mkdir($outputDir); }
+
 # Gallery Reader
 $galleries = galleryReader(conf('folders.gallery'));
 
