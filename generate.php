@@ -31,7 +31,6 @@ $options = [
 
     # Render all the files for the current Language
     foreach ($files as $file) {
-
         # Set file-specific options
         $options['pageKey'] = $file;
         
