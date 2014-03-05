@@ -1,3 +1,3 @@
 # uon: a static site generator
 
-Work in Progress
+:: Work in Progress
