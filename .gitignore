@@ -1,2 +1,6 @@
-www
-test.php
+# Ignore Generated Files
+www/**/*
+
+# Ignore Test Files
+*.php
+!generate.php
