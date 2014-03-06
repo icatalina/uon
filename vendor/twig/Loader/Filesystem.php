@@ -192,9 +192,11 @@ class Twig_Loader_Filesystem implements Twig_LoaderInterface, Twig_ExistsLoaderI
         }
 
         foreach ($this->paths[$namespace] as $path) {
-            
-            $_shortname = preg_replace('/(?<=\/)?(\w+?)$/', '_$1' , $shortname);
 
+            $_shortname = explode('/', $shortname);
+            $_shortname[] = '_' . array_pop($_shortname);
+            $_shortname = implode('/', $_shortname);
+            
             $names = [
                 $path.'/'.$shortname,
                 $path.'/'.$shortname.'.twig',
