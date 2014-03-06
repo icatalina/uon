@@ -2,9 +2,9 @@
 data[] = catalogue:10
 #}
 <h2>{{ i18n[pageKey].title }}</h2>
-{% for year, gallery in galleries.sub.catalogue.sub %}
+{% for year, gallery in data.sub %}
     <h3>{{year}}</h3>    
     {% for key, file in gallery.files %}
-        <img src="galleries/catalogue/{{year}}/{{key}}" width="{{gallery.config.sizes.small}}" />
+        <img src="data/catalogue/{{year}}/{{key}}" width="{{gallery.config.sizes.small}}" />
     {% endfor %}
 {% endfor %}

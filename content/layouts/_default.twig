@@ -3,17 +3,25 @@
 <head>
     <title>{{ i18n[pageKey].title }} | {{ globals.companyName }}</title>
     {% include 'partials/meta' %}
-
-    {% include 'partials/scripts' %}
     
     {% include 'partials/styles' %}
-
 </head>
-<body>
-    {% include 'partials/header' %}
-
-    {% include 'partials/menu' %}
-    
-    {% include pageKey %}
+<body class="{{pageKey}}">
+    <div class="sidebar">
+        {% include 'partials/header' %}
+        
+        <div class="menu_container">
+            {% include 'partials/menu' %}
+            {% include 'partials/address' %}
+        </div>
+        
+        {% include 'partials/social' %}
+    </div>
+    <div class="main">
+        <div class="content">
+            {% include pageKey %}    
+        </div>
+    </div>
+    {% include 'partials/scripts' %}
 </body>
 </html>

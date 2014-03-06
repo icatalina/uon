@@ -5,15 +5,18 @@ global $globals;
 $mainConfig = parse_ini_file('config/main.ini', true);
 $globals = parse_ini_file('config/globals.ini', true);
 
-function _var_extract($name, $array, $default = '') {
-    $name = explode('.', $name);
+function _var_extract($name, $array, $default) {
+    $exploded_name = explode('.', $name);
 
-    foreach ($name as $val) {
+    foreach ($exploded_name as $val) {
         if (is_array($array) && isset($array[$val])) {
             $array = $array[$val];
-        } else return $default;
+        } else{
+            if ($default != NULL){ return $default; }
+            else die("Empty Variable: $name");
+        } 
     }
-
+    
     return $array;
 
 }
@@ -58,7 +61,7 @@ function checkLang ($langDir, $outputDir) {
 }
 
 
-function galleryReader ($galleryDir, $galleryConfig = null) {
+function dataReader ($galleryDir, $galleryConfig = null) {
     
     $nextLevel = ['sub' => [], 'files' => []];
     $nextLevel['config'] = ($galleryConfig == null) ? conf('defaultGalleryConfig') : $galleryConfig;
@@ -75,7 +78,7 @@ function galleryReader ($galleryDir, $galleryConfig = null) {
 
     foreach ($directories as $dir) {
         if( is_dir("$galleryDir/$dir") ){ 
-            $nextLevel['sub'][$dir] = galleryReader("$galleryDir/$dir", $nextLevel['config']);
+            $nextLevel['sub'][$dir] = dataReader("$galleryDir/$dir", $nextLevel['config']);
         }
         else $nextLevel['files'][$dir] = preg_replace('/^\d+\_/', '', $dir);
     }    

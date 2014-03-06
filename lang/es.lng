@@ -13,9 +13,15 @@ title = Galeria
 [contact]
 title = Contacto
 
+[global]
+address1 = Muelle Ribera 25, Puerto Banús
+address2 = "Marbella (Málaga)"
+phone = Reservas: +34 952 77 88 77
+
+
 [pages]
 home = Filosofia
-menu = Carta
+;menu = Carta
 events = Eventos
 gallery = Galeria
 contact = Contacto

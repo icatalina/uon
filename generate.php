@@ -9,16 +9,11 @@ include 'utils/functions.php';
 $outputDir = conf('folders.output');
 $defaultLayout = conf("defaults.layout");
 
-<<<<<<< HEAD
-# Data Reader
-$data = galleryReader(conf('folders.data'));
-=======
 # Create output folder
 if (!is_dir($outputDir)) { mkdir($outputDir); }
 
-# Gallery Reader
-$galleries = galleryReader(conf('folders.gallery'));
->>>>>>> 6b41bdd8e189de338d31cee97c1091f458b51a41
+# Data Reader
+$data = dataReader(conf('folders.data'));
 
 # Load Twig
 $twig = include('utils/twigLoader.php');
