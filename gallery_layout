@@ -1,0 +1,25 @@
+{#
+list
+
+element
+    title
+
+children
+    fileName
+    type
+    properties [
+            alt
+            ...
+            ..
+            .
+            ]
+
+pagination
+    page
+    totalPages
+    totalItems
+    firstItemOnPage
+    lastItemOnPage
+    itemsPerPage
+
+#}

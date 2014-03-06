@@ -52,7 +52,9 @@ function checkLang ($langDir, $outputDir) {
             $tmp[$lang] = "$langDir/$lang.lng";
         }
     }
+
     return $tmp;
+    
 }
 
 

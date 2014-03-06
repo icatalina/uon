@@ -7,10 +7,10 @@ include 'utils/functions.php';
 
 # Some usefull variables
 $outputDir = conf('folders.output');
-$defaultLayout = conf("layouts.default");
+$defaultLayout = conf("defaults.layout");
 
-# Gallery Reader
-$galleries = galleryReader(conf('folders.gallery'));
+# Data Reader
+$data = galleryReader(conf('folders.data'));
 
 # Load Twig
 $twig = include('utils/twigLoader.php');
@@ -25,7 +25,7 @@ $languages = checkLang(conf('folders.lang'), $outputDir);
 $options = [
             'pages' => $files,
             'globals' => $globals,
-            'galleries' => $galleries
+            'data' => $data
             ];
 
 
@@ -37,11 +37,19 @@ $options = [
         
         if (preg_match('/^\s*\{\#(.*)\#\}\s*/s', file_get_contents("content/$file.twig"), $myoptions)) {
             $myopt = parse_ini_string($myoptions[1]);
-            var_dump($myopt);
+            if (isset($myopt['data'])) {
+                foreach ($myopt['data'] as $item) {
+                    $my2opt = explode(':', $item);    
+                    if(isset($my2opt[1])) {
+                        echo "pagination: " . $my2opt[1];
+                    }
+                    $options['data'] = $data['sub'][$my2opt[0]];
+                }
+            }
         }
         
-        # Set the layout
-        $layout = conf("layouts.$file", $defaultLayout);
+        # Set the layout TODO: Use the actual file options to load a layout
+        $layout = isset($myopt['layout']) ? $myopt['layout'] : $defaultLayout;
 
 
         # Loop over the languages
