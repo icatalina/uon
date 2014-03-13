@@ -1,0 +1,30 @@
+/*
+    Single Line comments are not alowed.
+
+    If any of these is not specified the _default value will be used.
+
+    "pageKey": {
+        "lang": ["lang1", "lang2"],     // Languages to use
+        "layout": "layout_file"         // layout to use
+        "filename": "file_name",        // File name to generate (if different than pageKey)
+        "resources": ["res1", "res2"],  // Resource files to load, by default messages.properties and  <pageKey>.properties are loaded
+        "list" : ["list1:pos"],         // Lists to include the file in and position (if wanted)
+        "dataSource": ["data:pages"]    // Data source for the file and number of elements per page
+    }
+
+*/
+{     
+    "_default": {
+        "lang": ["en", "es"],
+        "layout": "default"
+    },
+    "home": {
+        "filename": "index",
+        "resources": ["gal"],
+        "list" : ["menu:1"],
+        "dataSource": ["catalogue:10"]
+    },
+    "gallery":  { "list": ["menu:2"] },
+    "menu":     { "list": ["menu:3"] },
+    "events":   { "list": ["menu:4"] }
+}

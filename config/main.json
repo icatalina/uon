@@ -1,0 +1,27 @@
+{
+    "defaults": {
+        "scripts":      "global",
+        "styles":       "global",
+        "galleryConfigFile": "config.ini",
+        "layout":       "default"
+    },
+    "folders": {
+        "application_folder":   "app",
+        "resources":            "resources",
+        "input":                "content",
+        "output":               "www",
+        "data":                 "data"
+    },
+    "defaultGalleryConfig": {
+        "sizes": {
+            "small":    300,
+            "medium" :  500
+        }
+    },
+    "languages": ["es", "en"],
+    "properties": {
+        "folder": "resources",
+        "name": "messages"
+    }
+}
+

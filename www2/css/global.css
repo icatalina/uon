@@ -1,0 +1,39 @@
+/* Reset */
+html { height: 100%; font-family: 'Cabin', sans-serif; }
+body { margin: 0; height: 100%; color: #525252; line-height: 1.6em}
+a { text-decoration: none; color: #a8a8a8;}
+ul { padding: 0; margin: 0; list-style: none; }
+
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+
+.sidebar, .main {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0
+}
+
+h2 { margin: 0; text-transform: uppercase; text-align: right;}
+
+.sidebar { width: 30%; text-align: center; }
+.sidebar h1 {display: inline-block; }
+.sidebar .menu_container { width: 70%; position: absolute; right: 0; bottom: 0; }
+
+.contact_container { background: #a8a8a8; padding: 15px; color: white; margin-top: 5px; font-size: 13px; line-height: 1.3em; }
+.contact_container a { color: #fff; }
+.contact_container a:hover { text-decoration: underline; }
+.contact_container .contact { margin-top: 10px; }
+
+
+
+.sidebar ul {width: 100%; text-align: right;}
+.sidebar .menu a { font-size: 24px; text-transform: uppercase; display: block; padding: 7px 15px 7px 0; }
+.sidebar .menu a:hover { background: #E6E6E6; color: #A0A0A0;}
+.sidebar .menu a.selected { background: #a8a8a8; color: white; cursor: initial; }
+.sidebar .social { position: absolute; left: 0;  bottom: 0; width: 20%; }
+.sidebar .social a {} 
+
+
+
+.main { width: 70%; box-shadow: 0px 0px 15px #888888; right: 0; background: white url('../images/background.jpg') center center; background-size: cover;}
+.main .content { position: absolute; width: 40%; max-width: 350px; text-align: justify; right: 0; padding: 20px 30px; background: rgba(255, 255, 255, 0.8);}
