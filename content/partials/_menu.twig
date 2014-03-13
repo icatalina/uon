@@ -1,7 +1,7 @@
 {% spaceless %}
 <ul class="menu">
 {% for key,name in i18n.pages %}
-    <li><a href="{{key}}.html">{{ name }}</a></li>
+    <li><a {% if key == pageKey %}class="selected"{% endif %} href="{{key}}.html">{{ name }}</a></li>
 {% endfor %}
 </ul>
 {% endspaceless %}
